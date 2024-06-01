@@ -11,12 +11,12 @@ class Producto {
 class Tienda {
     constructor() {
         this.productos = [
-            new Producto(211, "Ernie Ball Hybrid", 55000.50, 3),
+            new Producto(211, "Ernie Ball Hybrid", 55000, 3),
             new Producto(712, "Ernie Ball Regular Slinky", 40000, 5),
             new Producto(413, "Ernie Ball Super Slinky", 35000, 3),
-            new Producto(314, "Ernie Ball Power Slynky", 50000.50, 8),
-            new Producto(814, "Ernie Ball Slynky Cobalt", 55000.80, 4)
-            
+            new Producto(314, "Ernie Ball Power Slynky", 50000, 8),
+            new Producto(814, "Ernie Ball Slynky Cobalt", 55000, 4)
+
         ];
         this.carrito = []
     }
@@ -24,7 +24,7 @@ class Tienda {
     productosDisponibles() {
         let productosLista = `Nuestros productos:\n\n`;
         this.productos.forEach((producto) => {
-            productosLista += `Código:  ${producto.identificador}  -  ${producto.nombre} - $${producto.precio} - stock: ${producto.cantidad}unds.\n`;
+            productosLista += `Código:  ${producto.identificador}  -  ${producto.nombre} - $${producto.precio} - stock: ${producto.cantidad}\n`;
         });
         alert(productosLista);
     }
@@ -41,20 +41,19 @@ class Tienda {
                     cantidad: cantidad
                 };
                 this.carrito.push(item);
-                alert(`Se agregaron ${cantidad} unidades de ${producto.nombre}`);
+                producto.cantidad -= cantidad;
+                alert(`Se agregó al carrito ${cantidad} unids de ${producto.nombre}`);
             }
         } else {
             alert(`No se encuentra el producto`);
         }
     }
 
-
-
     verCarrito() {
         let productosCarrito = `Productos ingresados:\n\n`;
         let totalCarrito = 0;
         this.carrito.forEach((item) => {
-            const totalItem = item.producto.precio * item.cantidad;
+            const totalItem = parseFloat(item.producto.precio * item.cantidad);
             productosCarrito += `${item.producto.nombre} - Precio und: $${item.producto.precio} - Cant.: ${item.cantidad} - $${totalItem}\n\n\n`;
             totalCarrito += totalItem;
         });
@@ -79,7 +78,7 @@ while (agregarMasProductos) {
         tienda.agregarAlCarrito(identificadorProducto, cantidadProducto);
     }
 
-    let respuestaUsuario = prompt(`¿Quieres agregar otro producto al carrito? (responde 'si' para continuar comprando, o 'no' para finalizar)`).toLowerCase();
+    const respuestaUsuario = prompt(`¿Quieres agregar otro producto al carrito? (responde 'si' para continuar comprando, o 'no' para finalizar)`).toLowerCase();
 
     do {
         if (respuestaUsuario !== `si` && respuestaUsuario !== `no`) {
@@ -90,10 +89,11 @@ while (agregarMasProductos) {
 
     if (respuestaUsuario === `si`) {
 
-    } else{
+    } else {
         agregarMasProductos = false;
         tienda.verCarrito();
         alert(`Gracias por elegirnos`);
     }
+
 }
 
