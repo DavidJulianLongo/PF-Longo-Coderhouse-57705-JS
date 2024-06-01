@@ -11,18 +11,20 @@ class Producto {
 class Tienda {
     constructor() {
         this.productos = [
-            new Producto(211, "Ernie Ball Hybrid", 500, 3),
-            new Producto(712, "Ernie Ball Regular Slinky", 1000, 5),
-            new Producto(413, "Ernie Ball Super Slinky", 1500, 3),
-            new Producto(314, "Ernie Ball Power Slynky", 700, 8)
+            new Producto(211, "Ernie Ball Hybrid", 55000.50, 3),
+            new Producto(712, "Ernie Ball Regular Slinky", 40000, 5),
+            new Producto(413, "Ernie Ball Super Slinky", 35000, 3),
+            new Producto(314, "Ernie Ball Power Slynky", 50000.50, 8),
+            new Producto(814, "Ernie Ball Slynky Cobalt", 55000.80, 4)
+            
         ];
         this.carrito = []
     }
 
     productosDisponibles() {
-        let productosLista = `Nuestros productos:\n`;
+        let productosLista = `Nuestros productos:\n\n`;
         this.productos.forEach((producto) => {
-            productosLista += `Código de producto: ${producto.identificador}. ${producto.nombre} - $${producto.precio} - stock: ${producto.cantidad}\n`;
+            productosLista += `Código:  ${producto.identificador}  -  ${producto.nombre} - $${producto.precio} - stock: ${producto.cantidad}unds.\n`;
         });
         alert(productosLista);
     }
@@ -46,10 +48,10 @@ class Tienda {
         }
     }
 
-   
 
-    verCarrito(){
-        let productosCarrito = `Productos ingresados:\n\n\n`;
+
+    verCarrito() {
+        let productosCarrito = `Productos ingresados:\n\n`;
         let totalCarrito = 0;
         this.carrito.forEach((item) => {
             const totalItem = item.producto.precio * item.cantidad;
@@ -88,7 +90,7 @@ while (agregarMasProductos) {
 
     if (respuestaUsuario === `si`) {
 
-    } else {
+    } else{
         agregarMasProductos = false;
         tienda.verCarrito();
         alert(`Gracias por elegirnos`);
