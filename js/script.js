@@ -31,17 +31,34 @@ class Tienda {
         const producto = this.productos.find((producto) => producto.identificador === identificador);
 
         if (producto) {
-            const item = {
-                producto: producto,
-                cantidad: cantidad
+            if (producto.cantidad < cantidad) {
+                alert(`La cantidad ingresada es mayor al stock disponible`);
+            } else {
+                const item = {
+                    producto: producto,
+                    cantidad: cantidad
+                };
+                this.carrito.push(item);
+                alert(`Se agregaron ${cantidad} unidades de ${producto.nombre}`);
             }
-            this.carrito.push(item);
-            alert(`Se agregaron ${cantidad} unidades de ${producto.nombre}`);
+        } else {
+            alert(`No se encuentra el producto`);
         }
     }
 
+   
 
-
+    verCarrito(){
+        let productosCarrito = `Productos ingresados:\n\n\n`;
+        let totalCarrito = 0;
+        this.carrito.forEach((item) => {
+            const totalItem = item.producto.precio * item.cantidad;
+            productosCarrito += `${item.producto.nombre} - Precio und: $${item.producto.precio} - Cant.: ${item.cantidad} - $${totalItem}\n\n\n`;
+            totalCarrito += totalItem;
+        });
+        productosCarrito += `Total: $${totalCarrito}`;
+        alert(productosCarrito);
+    }
 }
 
 const tienda = new Tienda();
@@ -52,12 +69,11 @@ while (agregarMasProductos) {
     tienda.productosDisponibles();
 
     const identificadorProducto = parseInt(prompt(`Ingrese el CODIGO del producto que desea agregar al carrito:`));
-    
-    if (isNaN(identificadorProducto)) {
-        alert(`Código de producto incorrecto`);
+    const cantidadProducto = parseInt(prompt(`Ingrese la cantidad:`));
+
+    if (isNaN(identificadorProducto) || identificadorProducto < 0 || isNaN(cantidadProducto) || cantidadProducto <= 0) {
+        alert(`Código de producto y/o la cantidad ingresada son incorrectas`);
     } else {
-        const cantidadProducto = parseInt(prompt(`Ingrese la cantidad:`));
-        if (isNaN(cantidadProducto))
         tienda.agregarAlCarrito(identificadorProducto, cantidadProducto);
     }
 
@@ -75,7 +91,7 @@ while (agregarMasProductos) {
     } else {
         agregarMasProductos = false;
         tienda.verCarrito();
-        alert(`Gracias por elejirnos`);
+        alert(`Gracias por elegirnos`);
     }
 }
 
