@@ -54,10 +54,10 @@ class Tienda {
         let totalCarrito = 0;
         this.carrito.forEach((item) => {
             const totalItem = parseFloat(item.producto.precio * item.cantidad);
-            productosCarrito += `${item.producto.nombre} - Precio und: $${item.producto.precio} - Cant.: ${item.cantidad} - $${totalItem}\n\n\n`;
+            productosCarrito += `${item.producto.nombre} - Precio und: $${item.producto.precio} - Cant.: ${item.cantidad} - $${totalItem}\n`;
             totalCarrito += totalItem;
         });
-        productosCarrito += `Total: $${totalCarrito}`;
+        productosCarrito += `\n Total: $${totalCarrito}`;
         alert(productosCarrito);
     }
 }
@@ -95,5 +95,5 @@ while (agregarMasProductos) {
         alert(`Gracias por elegirnos`);
     }
 
-}
+};
 
