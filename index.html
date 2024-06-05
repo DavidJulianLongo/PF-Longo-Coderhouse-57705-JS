@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>DL Bass-Strings</title>
 </head>
+
 <body>
+
+    <main>
+        <table id="carrito" class="carrito">
+            <thead>
+                <tr>
+                    <th class="carrito-header">Producto</th>
+                    <th class="carrito-header">Precio</th>
+                    <th class="carrito-header">Cantidad</th>
+                    <th class="carrito-header">Total</th>
+                </tr>
+            </thead>
+            <tbody class="carrito-body">
+                <!-- se agregan los productos del carrito -->
+            </tbody>
+            <tfoot class="carrito-footer">
+                <tr>
+                    <td colspan="3" class="carrito-total-label">Total:</td>
+                    <td id="total-carrito" class="carrito-total">$0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
     <script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+
+.carrito {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 10rem auto 0 auto;
+}
+
+.carrito-header {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.carrito-body tr:hover {
+    background-color: #82a87a;
+    color: #f9f9f9;
+}
+
+.carrito-footer {
+    background-color: #f2f2f2;
+}
+
+.carrito-footer td {
+    font-weight: bold;
+    color: #333;
+}
+
+.carrito-total {
+    font-size: 18px;
+}

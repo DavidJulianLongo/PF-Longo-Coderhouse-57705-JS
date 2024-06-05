@@ -19,7 +19,7 @@ class Tienda {
 
         ];
         this.carrito = []
-    }
+    };
 
     productosDisponibles() {
         let productosLista = `Nuestros productos:\n\n`;
@@ -43,24 +43,39 @@ class Tienda {
                 this.carrito.push(item);
                 producto.cantidad -= cantidad;
                 alert(`Se agregó al carrito ${cantidad} unids de ${producto.nombre}`);
+
             }
         } else {
             alert(`No se encuentra el producto`);
         }
     }
 
+
     verCarrito() {
-        let productosCarrito = `Productos ingresados:\n\n`;
+        const tbody = document.querySelector('#carrito tbody');
+        tbody.innerHTML = ''; 
+    
         let totalCarrito = 0;
         this.carrito.forEach((item) => {
             const totalItem = parseFloat(item.producto.precio * item.cantidad);
-            productosCarrito += `${item.producto.nombre} - Precio und: $${item.producto.precio} - Cant.: ${item.cantidad} - $${totalItem}\n`;
             totalCarrito += totalItem;
+    
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.producto.nombre}</td>
+                <td>$${item.producto.precio}</td>
+                <td>${item.cantidad}</td>
+                <td>$${totalItem}</td>
+            `;
+            tbody.appendChild(row);
         });
-        productosCarrito += `\n Total: $${totalCarrito}`;
-        alert(productosCarrito);
+    
+        const totalCarritoElemento = document.getElementById('total-carrito');
+        totalCarritoElemento.textContent = `$${totalCarrito}`;
     }
+
 }
+
 
 const tienda = new Tienda();
 
@@ -68,7 +83,6 @@ let agregarMasProductos = true;
 
 while (agregarMasProductos) {
     tienda.productosDisponibles();
-
     const identificadorProducto = parseInt(prompt(`Ingrese el CODIGO del producto que desea agregar al carrito:`));
     const cantidadProducto = parseInt(prompt(`Ingrese la cantidad:`));
 
@@ -78,8 +92,7 @@ while (agregarMasProductos) {
         tienda.agregarAlCarrito(identificadorProducto, cantidadProducto);
     }
 
-    const respuestaUsuario = prompt(`¿Quieres agregar otro producto al carrito? (responde 'si' para continuar comprando, o 'no' para finalizar)`).toLowerCase();
-
+    const respuestaUsuario = prompt(`¿Quieres agregar otro producto al carrito? (responde 'si' para continuar agregando productos, o 'no' para ver tu carrito)`).toLowerCase();
     do {
         if (respuestaUsuario !== `si` && respuestaUsuario !== `no`) {
             respuestaUsuario = prompt(`Por favor ingresa 'si' para realizar otra operación, o 'no' para salir.`);
@@ -91,9 +104,8 @@ while (agregarMasProductos) {
 
     } else {
         agregarMasProductos = false;
-        tienda.verCarrito();
         alert(`Gracias por elegirnos`);
+        tienda.verCarrito();
     }
-
 };
 
