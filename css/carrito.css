@@ -1,16 +1,16 @@
-.container {
-    width: 50%;
-    margin: 3.125rem auto;
+.carrtio__container {
     background-color: #fff;
-    padding: 20px;
     box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
     border-radius: .5rem;
+    margin: 0 auto 3rem auto;
+    padding: 3rem 1.25rem;
+    width: 90%;
 }
 
 h2 {
     text-align: center;
     color: #333;
-    margin-bottom: 3.125rem;
+    margin-bottom: 48px;
 }
 
 table {
@@ -69,10 +69,11 @@ th, td {
     padding: .9375rem;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: .25rem;
+    border-radius: .3125rem;
     text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-finalizar:hover {
-    background-color: #218838;
+    background-color: #0e5c2e;
 }

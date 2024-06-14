@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="stylesheet" href="./css/productos.css">
     <title>DL Bass-Strings</title>
 </head>
 
@@ -18,26 +19,21 @@
         </nav>
     </header>
     <main>
-        <!-- <table id="carrito" class="carrito">
-            <thead>
-                <tr>
-                    <th class="carrito-header">Producto</th>
-                    <th class="carrito-header">Precio</th>
-                    <th class="carrito-header">Cantidad</th>
-                    <th class="carrito-header">Total</th>
-                </tr>
-            </thead>
-            <tbody class="carrito-body">
-                se agregan los productos del carrito 
-            </tbody>
-            <tfoot class="carrito-footer">
-                <tr>
-                    <td colspan="3" class="carrito-total-label">Total:</td>
-                    <td id="total-carrito" class="carrito-total">$0</td>
-                </tr>
-            </tfoot>
-        </table> -->
-        <section class="container">
+        <section class="card-container">
+            <div class="card">
+                <img src="./css/assets/img/cuerdas/cuerdas.webp" alt="Cuerdas de Bajo">
+                <div class="card-content">
+                    <h3>Cuerdas de Bajo</h3>
+                    <p>Descripción breve de las cuerdas de bajo, ideales para músicos profesionales.</p>
+                    <div class="price-buy">
+                        <span class="price">$25.00</span>
+                        <button class="buy-btn">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="carrtio__container">
             <h2>Carrito de Compras</h2>
             <table id="carrito" class="carrito">
                 <thead>

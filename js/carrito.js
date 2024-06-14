@@ -81,31 +81,31 @@ const tienda = new Tienda();
 
 let agregarMasProductos = true;
 
-while (agregarMasProductos) {
-    tienda.productosDisponibles();
-    const identificadorProducto = parseInt(prompt(`Ingrese el CODIGO del producto que desea agregar al carrito:`));
-    const cantidadProducto = parseInt(prompt(`Ingrese la cantidad:`));
+// while (agregarMasProductos) {
+//     tienda.productosDisponibles();
+//     const identificadorProducto = parseInt(prompt(`Ingrese el CODIGO del producto que desea agregar al carrito:`));
+//     const cantidadProducto = parseInt(prompt(`Ingrese la cantidad:`));
 
-    if (isNaN(identificadorProducto) || identificadorProducto < 0 || isNaN(cantidadProducto) || cantidadProducto <= 0) {
-        alert(`Código de producto y/o la cantidad ingresada son incorrectas`);
-    } else {
-        tienda.agregarAlCarrito(identificadorProducto, cantidadProducto);
-    }
+//     if (isNaN(identificadorProducto) || identificadorProducto < 0 || isNaN(cantidadProducto) || cantidadProducto <= 0) {
+//         alert(`Código de producto y/o la cantidad ingresada son incorrectas`);
+//     } else {
+//         tienda.agregarAlCarrito(identificadorProducto, cantidadProducto);
+//     }
 
-    const respuestaUsuario = prompt(`¿Quieres agregar otro producto al carrito? (responde 'si' para continuar agregando productos, o 'no' para ver tu carrito)`).toLowerCase();
-    do {
-        if (respuestaUsuario !== `si` && respuestaUsuario !== `no`) {
-            respuestaUsuario = prompt(`Por favor ingresa 'si' para realizar otra operación, o 'no' para salir.`);
-        };
-    } while (respuestaUsuario !== `si` && respuestaUsuario !== `no`);
+//     const respuestaUsuario = prompt(`¿Quieres agregar otro producto al carrito? (responde 'si' para continuar agregando productos, o 'no' para ver tu carrito)`).toLowerCase();
+//     do {
+//         if (respuestaUsuario !== `si` && respuestaUsuario !== `no`) {
+//             respuestaUsuario = prompt(`Por favor ingresa 'si' para realizar otra operación, o 'no' para salir.`);
+//         };
+//     } while (respuestaUsuario !== `si` && respuestaUsuario !== `no`);
 
 
-    if (respuestaUsuario === `si`) {
+//     if (respuestaUsuario === `si`) {
 
-    } else {
-        agregarMasProductos = false;
-        alert(`Gracias por elegirnos`);
-        tienda.verCarrito();
-    }
-};
+//     } else {
+//         agregarMasProductos = false;
+//         alert(`Gracias por elegirnos`);
+//         tienda.verCarrito();
+//     }
+// };
 

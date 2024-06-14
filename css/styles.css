@@ -10,3 +10,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fdfdfd;
 }
+
+main{
+    max-width: 90rem;
+    margin: 0 auto;
+}
