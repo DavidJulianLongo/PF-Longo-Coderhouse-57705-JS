@@ -43,7 +43,6 @@ class Tienda {
                 this.carrito.push(item);
                 producto.cantidad -= cantidad;
                 alert(`Se agregó al carrito ${cantidad} unids de ${producto.nombre}`);
-
             }
         } else {
             alert(`No se encuentra el producto`);
@@ -66,6 +65,7 @@ class Tienda {
                 <td>$${item.producto.precio}</td>
                 <td>${item.cantidad}</td>
                 <td>$${totalItem}</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
             `;
             tbody.appendChild(row);
         });

@@ -1,0 +1,78 @@
+.container {
+    width: 50%;
+    margin: 3.125rem auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3.125rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.25rem;
+}
+
+th, td {
+    padding: .75rem;
+    text-align: center;
+    border-bottom: .0625rem solid #ddd;
+}
+
+.carrito-header {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+} */
+
+.btn-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: .5rem .75rem;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+.btn-eliminar:hover {
+    background-color: #ff1a1a;
+}
+
+.carrito-total-label {
+    text-align: right;
+    font-weight: bold;
+    background-color: #f8f8f8;
+}
+
+.carrito-total {
+    font-weight: bold;
+}
+
+.btn-finalizar {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: .9375rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+    text-align: center;
+}
+
+.btn-finalizar:hover {
+    background-color: #218838;
+}

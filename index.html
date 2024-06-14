@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/carrito.css">
     <title>DL Bass-Strings</title>
 </head>
 
 <body>
-
+    <header id="header">
+        <nav id="navbar">
+            <!-- se agrega nav con JS -->
+        </nav>
+    </header>
     <main>
-        <table id="carrito" class="carrito">
+        <!-- <table id="carrito" class="carrito">
             <thead>
                 <tr>
                     <th class="carrito-header">Producto</th>
@@ -21,7 +28,7 @@
                 </tr>
             </thead>
             <tbody class="carrito-body">
-                <!-- se agregan los productos del carrito -->
+                se agregan los productos del carrito 
             </tbody>
             <tfoot class="carrito-footer">
                 <tr>
@@ -29,10 +36,35 @@
                     <td id="total-carrito" class="carrito-total">$0</td>
                 </tr>
             </tfoot>
-        </table>
+        </table> -->
+        <section class="container">
+            <h2>Carrito de Compras</h2>
+            <table id="carrito" class="carrito">
+                <thead>
+                    <tr>
+                        <th class="carrito-header">Producto</th>
+                        <th class="carrito-header">Precio</th>
+                        <th class="carrito-header">Cantidad</th>
+                        <th class="carrito-header">Total</th>
+                        <th class="carrito-header">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="carrito-body">
+                    <!-- se agregan los productos del carrito -->
+                </tbody>
+                <tfoot class="carrito-footer">
+                    <tr>
+                        <td colspan="3" class="carrito-total-label">Total:</td>
+                        <td id="total-carrito" class="carrito-total">$0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="btn-finalizar">Realizar Compra</button>
+        </section>
     </main>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/carrito.js"></script>
 </body>
 
 </html>
