@@ -1,6 +1,7 @@
-.card-container {
+.card__container {
     display: flex;
-    gap: 20px;
+    row-gap: 6rem;
+    column-gap: 5rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -10,56 +11,53 @@
 
 .card {
     background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: .9375rem;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    width: 18.75rem;
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 .card-content {
-    padding: 10px;
+    padding: .625rem;
     text-align: center;
     background-color: #fff;
 }
 
 .card-content h3 {
-    margin: 10px 0;
-    font-size: 1.5em;
+    margin: .625rem 0;
+    font-size: 1.2em;
     color: #242424;
 }
 
 .card-content p {
-    font-size: 1em;
+    font-size: 1rem;
     color: #7a7a7a;
-    margin: 10px 0;
+    margin: .625rem 0;
     line-height: 1.6;
 }
 
 .price-buy {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: .625rem;
     align-items: center;
-    margin-top: 15px;
+    margin-top: .9375rem;
 }
 
 .price {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: #9b9b9b;
     font-weight: bold;
 }
 
 .buy-btn {
-    padding: 10px 10px;
+    padding: .625rem .625rem;
     font-size: 1em;
     color: #fff;
     background-color: #27ae60;
@@ -75,6 +73,5 @@
 
 
 .card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, 0.2);
 }

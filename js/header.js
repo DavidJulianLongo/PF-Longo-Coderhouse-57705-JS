@@ -3,7 +3,7 @@ header.className = 'header';
 const navbar = document.getElementById('navbar');
 navbar.className = 'nav__bar';
 
-/*logo y nombre*/
+// logo y nombre
 const divLogoContainer = document.createElement('div');
 divLogoContainer.className = ('logo__container');
 navbar.appendChild(divLogoContainer);
@@ -16,7 +16,7 @@ shopName.innerText = 'DL STRINGS';
 divLogoContainer.appendChild(shopName);
 
 
-/*lista de productos por marca*/
+// lista de productos por marca
 const productsContainer = document.createElement('div');
 productsContainer.className = ('products__container');
 navbar.appendChild(productsContainer);
@@ -31,7 +31,7 @@ for (const link of productFilter) {
 }
 
 
-/* carrito */
+// carrito 
 const cartContainer = document.createElement('div');
 cartContainer.className = 'cart__container';
 navbar.appendChild(cartContainer);
