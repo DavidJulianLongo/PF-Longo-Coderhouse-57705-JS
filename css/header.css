@@ -34,16 +34,17 @@
 .products__container ul {
     display: flex;
     gap: 3.125rem;
+    cursor: pointer;
 }
 
 
-.products__container ul li a {
+.products__container ul li {
     color: #fff;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
-.products__container ul li a:hover {
+.products__container ul li:hover {
     color: #ff6600;
 }
 

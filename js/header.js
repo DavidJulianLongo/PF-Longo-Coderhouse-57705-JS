@@ -24,9 +24,9 @@ const ulNav = document.createElement('ul');
 productsContainer.appendChild(ulNav);
 
 const productFilter = ["Ernie Ball", "D'addario", "Rotosound", "DR"];
-for (const link of productFilter) {
+for (const name of productFilter) {
     const ulNavLi = document.createElement('li');
-    ulNavLi.innerHTML = `<a href= "">${link}</a>`;
+    ulNavLi.innerHTML = `${name}`;
     ulNav.appendChild(ulNavLi);
 }
 

@@ -81,7 +81,6 @@ function mostrarDesdeLs() {
 };
 
 
-document.addEventListener('DOMContentLoaded', mostrarDesdeLs);
 
 // Itera sobre cada botón encontrado con querySelectorAll para acceder al atributo data-id de cada uno
 // y asi poder ir agregando el producto al localStorage
@@ -122,7 +121,7 @@ carrito.addEventListener('click', (event) => {
 });
 
 
-
+document.addEventListener('DOMContentLoaded', mostrarDesdeLs);
 
 
 
