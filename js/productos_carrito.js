@@ -108,6 +108,18 @@ btnAniadir.forEach(btn => {
 });
 
 
+//Eliminar productos del carrito y LS
+const carrito = document.getElementById('carrito');
+carrito.addEventListener('click', (event) => {
+    if (event.target.classList.contains('btn-eliminar')) {
+        const key = event.target.getAttribute('data-key');
+        let itemEnLs = JSON.parse(localStorage.getItem(key));
+
+        itemEnLs.cantidad > 1 ? (itemEnLs.cantidad -= 1, localStorage.setItem(key, JSON.stringify(itemEnLs))) : localStorage.removeItem(key);
+
+        mostrarDesdeLs();
+    }
+});
 
 
 
