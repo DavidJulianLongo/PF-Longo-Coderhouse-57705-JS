@@ -1,4 +1,4 @@
-.carrtio__container {
+.carrito-container {
     background-color: #fff;
     box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
     border-radius: .5rem;
@@ -19,7 +19,8 @@ table {
     margin-bottom: 1.25rem;
 }
 
-th, td {
+th,
+td {
     padding: .75rem;
     text-align: center;
     border-bottom: .0625rem solid #ddd;
