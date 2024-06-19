@@ -5,20 +5,20 @@ navbar.className = 'nav__bar';
 
 // logo y nombre
 const divLogoContainer = document.createElement('div');
-divLogoContainer.className = ('logo__container');
+divLogoContainer.className = 'logo__container';
 navbar.appendChild(divLogoContainer);
 const imgLog = document.createElement('img');
 imgLog.src = './css/assets/img/logo/logo2.png';
 divLogoContainer.appendChild(imgLog);
 const shopName = document.createElement('span');
 shopName.className = 'shop__name';
-shopName.innerText = 'DL STRINGS';
+shopName.innerHTML = ' <a href="./index.html">DL B-STRINGS</a>';
 divLogoContainer.appendChild(shopName);
 
 
-// lista de productos por marca
+// lista de productos por marca 
 const productsContainer = document.createElement('div');
-productsContainer.className = ('products__container');
+productsContainer.className = 'products__container';
 navbar.appendChild(productsContainer);
 const ulNav = document.createElement('ul');
 productsContainer.appendChild(ulNav);
@@ -28,6 +28,13 @@ for (const name of productFilter) {
     const ulNavLi = document.createElement('li');
     ulNavLi.innerHTML = `${name}`;
     ulNav.appendChild(ulNavLi);
+
+    ulNavLi.addEventListener('click', () => {
+        const filteredProducts = tienda.productos.filter(producto =>
+            producto.nombre.includes(name)
+        );
+        mostrarProductos(filteredProducts);
+    });
 }
 
 
@@ -35,10 +42,6 @@ for (const name of productFilter) {
 const cartContainer = document.createElement('div');
 cartContainer.className = 'cart__container';
 navbar.appendChild(cartContainer);
-const priceCart = document.createElement('span');
-priceCart.className = ('price_cart');
-priceCart.innerText = ('$00,00');
-cartContainer.appendChild(priceCart);
 const cart = document.createElement('i');
 cart.classList.add('fas', 'fa-shopping-cart');
 cartContainer.appendChild(cart);

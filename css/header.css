@@ -22,12 +22,11 @@
 
 .logo__container img {
     width: 3.125rem;
-    margin-right: .625rem;
-
 }
 
-.shop__name {
+.shop__name a{
     font-size: 1.5rem;
+    color: #fff;
 }
 
 
@@ -52,15 +51,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 9rem;
+    width: 5rem;
 }
 
 .cart__container i {
     font-size: 1.5rem;
 }
 
-.price_cart {
-    font-size: 1rem;
-    color: #fff;
-    margin-right: 1.5625rem;
-}
