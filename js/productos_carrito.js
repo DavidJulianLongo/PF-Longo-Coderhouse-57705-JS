@@ -21,15 +21,15 @@ class Tienda {
             new Producto(160, "D'addario EXL160", 70500, 2, "./css/assets/img/cuerdas/daddarioEXL160.webp"),
             new Producto(312, "Rotosound RS66LF", 43500, 3, "./css/assets/img/cuerdas/RS66LF.jpg"),
             new Producto(214, "Ernie Ball Extra Slinky", 40500, 3, "./css/assets/img/cuerdas/extra.png"),
-            new Producto(313, "Rotosound RS66LH", 43500, 3, "./css/assets/img/cuerdas/RS66Lh.jpg"),
+            new Producto(313, "Rotosound RS66LH", 43500, 3, "./css/assets/img/cuerdas/RS66LH.jpg"),
             new Producto(171, "D'addario EXL170", 43500, 3, "./css/assets/img/cuerdas/daddarioEXL170.webp"),
             new Producto(215, "Ernie Ball Hyper Slinky", 40500, 3, "./css/assets/img/cuerdas/hyper.png"),
             new Producto(314, "Rotosound RDB66LD", 43500, 5, "./css/assets/img/cuerdas/RDB66LD.jpg"),
             new Producto(216, "Ernie Ball Power Slynky", 56000, 8, "./css/assets/img/cuerdas/power.png"),
             new Producto(172, "D'addario EXL220-5", 43500, 3, "./css/assets/img/cuerdas/daddarioEXL220-5.webp"),
             new Producto(217, "Ernie Ball Beefy Slynky", 65500, 4, "./css/assets/img/cuerdas/beefy.png"),
-            new Producto(315, "Rotosound RS66LN", 43500, 5, "./css/assets/img/cuerdas/RS66LN.jpg"),
-            
+            new Producto(315, "Rotosound RS66LN", 43500, 5, "./css/assets/img/cuerdas/RS66LN.jpg")
+
         ];
     };
 }
@@ -69,7 +69,6 @@ const tienda = new Tienda();
 mostrarProductos(tienda.productos);
 
 
-
 // Carga y muestra productos desde el LS en el carrito
 function mostrarDesdeLs() {
     const carritoBody = document.getElementById('carrito-body');
@@ -99,7 +98,7 @@ function mostrarDesdeLs() {
 
 
 
-// Itera sobre cada botón "añadir al carrito", 
+// Añado un evento a cada boton de los productos", 
 const btnAniadir = document.querySelectorAll('.buy-btn')
 btnAniadir.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -136,10 +135,5 @@ carrito.addEventListener('click', (event) => {
 
 
 document.addEventListener('DOMContentLoaded', mostrarDesdeLs);
-
-
-
-
-
 
 

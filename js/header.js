@@ -28,13 +28,6 @@ for (const name of productFilter) {
     const ulNavLi = document.createElement('li');
     ulNavLi.innerHTML = `${name}`;
     ulNav.appendChild(ulNavLi);
-
-    ulNavLi.addEventListener('click', () => {
-        const filteredProducts = tienda.productos.filter(producto =>
-            producto.nombre.includes(name)
-        );
-        mostrarProductos(filteredProducts);
-    });
 }
 
 
