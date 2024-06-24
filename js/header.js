@@ -12,26 +12,19 @@ imgLog.src = './css/assets/img/logo/logo2.png';
 divLogoContainer.appendChild(imgLog);
 const shopName = document.createElement('span');
 shopName.className = 'shop__name';
-shopName.innerHTML = ' <a href="./index.html">DL B-STRINGS</a>';
+shopName.innerHTML = '<a href="./index.html">DL B-STRINGS</a>';
 divLogoContainer.appendChild(shopName);
 
 
-// lista de productos por marca 
+// creo el ul y desde productos_carrito.js se agregan los li
 const productsContainer = document.createElement('div');
 productsContainer.className = 'products__container';
 navbar.appendChild(productsContainer);
 const ulNav = document.createElement('ul');
 productsContainer.appendChild(ulNav);
 
-const productFilter = ["Ernie Ball", "D'addario", "Rotosound", "DR"];
-for (const name of productFilter) {
-    const ulNavLi = document.createElement('li');
-    ulNavLi.innerHTML = `${name}`;
-    ulNav.appendChild(ulNavLi);
-}
 
-
-// carrito 
+// carrito icono
 const cartContainer = document.createElement('div');
 cartContainer.className = 'cart__container';
 navbar.appendChild(cartContainer);

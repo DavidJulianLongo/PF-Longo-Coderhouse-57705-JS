@@ -12,7 +12,7 @@
 .card {
     background-color: #fff;
     border-radius: .9375rem;
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .25rem .5rem #0000001a;
     overflow: hidden;
     width: 18.75rem;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -20,7 +20,6 @@
 
 .card img {
     width: 100%;
-    height: auto;
 }
 
 .card-content {
@@ -64,13 +63,18 @@
     border: none;
     border-radius: .3125rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .buy-btn:hover {
-    background-color: #0e5c2e;
+    background-color: #208d4e;
+}
+
+.buy-btn:active {
+    background-color: #0e5c2e; 
+    transform: scale(0.99); 
 }
 
 .card:hover {
-    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .75rem 1.5rem #00000033;
 }

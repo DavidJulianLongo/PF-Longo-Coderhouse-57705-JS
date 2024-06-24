@@ -66,9 +66,14 @@ th, td {
     cursor: pointer;
     border-radius: .3125rem;
     text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-finalizar:hover {
-    background-color: #0e5c2e;
+    background-color: #208d4e;
+}
+
+.btn-finalizar:active {
+    background-color: #0e5c2e; 
+    transform: scale(0.99); 
 }

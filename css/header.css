@@ -1,8 +1,13 @@
 .header {
     background-color: #253a55;
+    box-shadow: 0 .25rem .5rem #0000001a;
     color: #fff;
     padding: 2.5rem 3.125rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .nav__bar {
