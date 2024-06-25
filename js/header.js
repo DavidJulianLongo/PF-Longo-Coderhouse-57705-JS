@@ -8,11 +8,11 @@ const divLogoContainer = document.createElement('div');
 divLogoContainer.className = 'logo__container';
 navbar.appendChild(divLogoContainer);
 const imgLog = document.createElement('img');
-imgLog.src = './css/assets/img/logo/logo2.png';
+imgLog.src = './css/assets/img/logo/bajo.png';
 divLogoContainer.appendChild(imgLog);
-const shopName = document.createElement('span');
+const shopName = document.createElement('p');
 shopName.className = 'shop__name';
-shopName.innerHTML = '<a href="./index.html">DL B-STRINGS</a>';
+shopName.innerHTML = 'DB-STRINGS';
 divLogoContainer.appendChild(shopName);
 
 

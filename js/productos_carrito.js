@@ -67,7 +67,7 @@ function mostrarProductos(productos) {
 }
 
 
-// Agregamos eventos a todos los botones
+// Agrega eventos a todos los botones
 function aniadirALs() {
     const btnAniadir = document.querySelectorAll('.buy-btn');
     btnAniadir.forEach(btn => {
@@ -99,7 +99,7 @@ function aniadirALs() {
             } else {
                 Swal.fire({
                     imageUrl: `${productoAgregado.rutaImg}`,
-                    text: `${productoAgregado.nombre} no cuenta con suficiente stock`,
+                    text: `${productoAgregado.nombre} no cuenta con suficiente stock...!!!`,
                 });
             }
         });
@@ -120,12 +120,6 @@ function productFilter() {
         });
     }
 }
-
-// Se instacia la tienda  y luego se muestran los productos
-const tienda = new Tienda();
-mostrarProductos(tienda.productos);
-productFilter();
-
 
 
 // Carga y muestra productos desde el LS en el carrito
@@ -156,6 +150,14 @@ function mostrarDesdeLs() {
 };
 
 
+
+// Se instacia la tienda  y luego se muestran los productos
+const tienda = new Tienda();
+mostrarProductos(tienda.productos);
+productFilter();
+
+//Muestra todos los productos al hacer click en el nombre de la pag
+shopName.addEventListener('click', () => mostrarProductos(tienda.productos));
 
 //Elimina productos del carrito y LS
 const carrito = document.getElementById('carrito');

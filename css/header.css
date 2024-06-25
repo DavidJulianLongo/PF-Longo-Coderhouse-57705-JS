@@ -1,8 +1,7 @@
 .header {
     background-color: #253a55;
     box-shadow: 0 .25rem .5rem #0000001a;
-    color: #fff;
-    padding: 2.5rem 3.125rem;
+    padding: 2.5rem 6.25rem;
     margin-bottom: 10rem;
     position: sticky;
     top: 0;
@@ -14,9 +13,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
     max-width: 90rem;
-    margin: 0 auto;
-
 }
 
 .logo__container {
@@ -26,12 +24,13 @@
 }
 
 .logo__container img {
-    width: 3.125rem;
+    width: 5rem;
 }
 
-.shop__name a{
+.shop__name {
     font-size: 1.5rem;
     color: #fff;
+    cursor: pointer;
 }
 
 
@@ -56,10 +55,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 5rem;
+    width: 9.25rem;
 }
 
 .cart__container i {
     font-size: 1.5rem;
+    color: #fff;
 }
-
