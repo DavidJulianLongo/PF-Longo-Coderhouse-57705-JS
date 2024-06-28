@@ -1,7 +1,7 @@
 .header {
     background-color: #253a55;
     box-shadow: 0 .25rem .5rem #0000001a;
-    padding: 2.5rem 6.25rem;
+    padding: 1.25rem 6.25rem;
     margin-bottom: 10rem;
     position: sticky;
     top: 0;
@@ -43,7 +43,7 @@
 
 .products__container ul li {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.25rem;
     transition: color 0.3s ease;
 }
 
@@ -59,6 +59,6 @@
 }
 
 .cart__container i {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: #fff;
 }

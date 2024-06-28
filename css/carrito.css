@@ -38,11 +38,19 @@ th, td {
     padding: .5rem .75rem;
     cursor: pointer;
     border-radius: .25rem;
+    transition: background-color 0.3s;
 }
 
 .btn-eliminar:hover {
     background-color: #ff1a1a;
+
 }
+
+.btn-eliminar:active {
+    background-color: #9e1414;
+    transform: scale(0.95); 
+}
+
 
 .carrito-total-label {
     text-align: right;

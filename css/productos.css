@@ -12,7 +12,7 @@
 .card {
     background-color: #fff;
     border-radius: .9375rem;
-    box-shadow: 0 .25rem .5rem #0000001a;
+    box-shadow: 0 .25rem .5rem #00000056;
     overflow: hidden;
     width: 18.75rem;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -41,6 +41,7 @@
     line-height: 1.6;
 }
 
+
 .price-buy {
     display: flex;
     justify-content: center;
@@ -55,7 +56,7 @@
     font-weight: bold;
 }
 
-.buy-btn {
+.agregar-btn {
     padding: .625rem .625rem;
     font-size: 1em;
     color: #fff;
@@ -63,16 +64,16 @@
     border: none;
     border-radius: .3125rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.15s;
 }
 
-.buy-btn:hover {
+.agregar-btn:hover {
     background-color: #208d4e;
 }
 
-.buy-btn:active {
+.agregar-btn:active {
     background-color: #0e5c2e; 
-    transform: scale(0.99); 
+    transform: scale(0.95); 
 }
 
 .card:hover {

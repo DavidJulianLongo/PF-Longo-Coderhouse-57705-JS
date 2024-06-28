@@ -40,11 +40,16 @@ class Tienda {
 
 
 
-// Genera las cards para mostrar cada uno de los productos de la tienda
 const cardContainer = document.querySelector('.card-container');
+const carrito = document.getElementById('carrito');
+const carritoBody = document.getElementById('carrito-body');
+const totalCarrito = document.getElementById('total-carrito');
 
+
+// Genera las cards para mostrar cada uno de los productos de la tienda
 function mostrarProductos(productos) {
     cardContainer.innerHTML = '';
+
     productos.forEach(producto => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -56,7 +61,7 @@ function mostrarProductos(productos) {
                 <p>Stock: ${producto.stock}</p>
                 <div class="price-buy">
                     <span class="price">$${(producto.precio)}</span>
-                    <button class="buy-btn" data-id="${producto.identificador}">Añadir al carrito</button>
+                    <button class="agregar-btn" data-id="${producto.identificador}">Agregar al carrito</button>
                 </div>
             </div>
         `;
@@ -67,65 +72,8 @@ function mostrarProductos(productos) {
 }
 
 
-// Agrega eventos a todos los botones
-function aniadirALs() {
-    const btnAniadir = document.querySelectorAll('.buy-btn');
-    btnAniadir.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const productoId = parseInt(btn.getAttribute('data-id'));
-            const productoAgregado = tienda.productos.find(p => p.identificador === productoId);
-
-            let itemEnLs = localStorage.getItem(`producto_${productoId}`);
-            itemEnLs = itemEnLs ? JSON.parse(itemEnLs) : { ...productoAgregado, cantidad: 0 };
-
-            if (itemEnLs.cantidad < productoAgregado.stock) {
-                itemEnLs.cantidad += 1;
-                localStorage.setItem(`producto_${productoId}`, JSON.stringify(itemEnLs));
-
-                Toastify({
-                    text: `${productoAgregado.nombre} se agregó al carrito`,
-                    className: "info",
-                    offset: {
-                        x: 120,
-                        y: 35
-                    },
-                    style: {
-                        background: "#27ae60",
-                    }
-                }).showToast();
-
-                mostrarDesdeLs();
-
-            } else {
-                Swal.fire({
-                    imageUrl: `${productoAgregado.rutaImg}`,
-                    text: `${productoAgregado.nombre} no cuenta con suficiente stock...!!!`,
-                });
-            }
-        });
-    });
-}
-
-// Filtra los productos por marca
-function productFilter() {
-    const producName = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon"];
-    for (const name of producName) {
-        const ulNavLi = document.createElement('li');
-        ulNavLi.innerHTML = `${name}`;
-        ulNav.appendChild(ulNavLi);
-
-        ulNavLi.addEventListener('click', () => {
-            const filteredProducts = tienda.productos.filter(producto => producto.nombre.includes(name));
-            mostrarProductos(filteredProducts);
-        });
-    }
-}
-
-
 // Carga y muestra productos desde el LS en el carrito
 function mostrarDesdeLs() {
-    const carritoBody = document.getElementById('carrito-body');
-    const totalCarrito = document.getElementById('total-carrito');
     carritoBody.innerHTML = '';
     let total = 0;
 
@@ -150,17 +98,70 @@ function mostrarDesdeLs() {
 };
 
 
+// Agrega eventos a todos los botones
+function aniadirALs() {
+    const btnAniadir = document.querySelectorAll('.agregar-btn');
+    btnAniadir.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const productoId = parseInt(btn.getAttribute('data-id'));
+            const productoAgregado = tienda.productos.find(p => p.identificador === productoId);
 
-// Se instacia la tienda  y luego se muestran los productos
-const tienda = new Tienda();
-mostrarProductos(tienda.productos);
-productFilter();
+            let itemEnLs = localStorage.getItem(`producto_${productoId}`);
+            itemEnLs = itemEnLs ? JSON.parse(itemEnLs) : { ...productoAgregado, cantidad: 0 };
+
+            if (itemEnLs.cantidad < productoAgregado.stock) {
+                itemEnLs.cantidad += 1;
+                localStorage.setItem(`producto_${productoId}`, JSON.stringify(itemEnLs));
+
+                Toastify({
+                    text: `${productoAgregado.nombre}\nse agregó al carrito`,
+                    className: 'info',
+                    offset: {
+                        x: 120,
+                        y: 35
+                    },
+                    style: {
+                        background: '#27ae60',
+                    }
+                }).showToast();
+
+                mostrarDesdeLs();
+            } else {
+                Swal.fire({
+                    imageUrl: `${productoAgregado.rutaImg}`,
+                    text: `${productoAgregado.nombre} no cuenta con suficiente stock...!!!`,
+                });
+            }
+        });
+    });
+}
+
+// Filtra los productos por marca
+function productFilter() {
+    const productName = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon"];
+
+    for (const name of productName) {
+        const ulNavLi = document.createElement('li');
+        ulNavLi.innerHTML = `${name}`;
+        ulNav.appendChild(ulNavLi);
+
+        ulNavLi.addEventListener('click', () => {
+            const filteredProducts = tienda.productos.filter(producto => producto.nombre.includes(name));
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            mostrarProductos(filteredProducts);
+            
+        });
+    }
+}
+
 
 //Muestra todos los productos al hacer click en el nombre de la pag
-shopName.addEventListener('click', () => mostrarProductos(tienda.productos));
+shopName.addEventListener('click', () =>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    mostrarProductos(tienda.productos)
+} );
 
 //Elimina productos del carrito y LS
-const carrito = document.getElementById('carrito');
 carrito.addEventListener('click', (event) => {
     if (event.target.classList.contains('btn-eliminar')) {
         const key = event.target.getAttribute('data-key');
@@ -173,5 +174,10 @@ carrito.addEventListener('click', (event) => {
 });
 
 
+
+// Se instacia la tienda  y luego se muestran los productos
+const tienda = new Tienda();
+mostrarProductos(tienda.productos);
+productFilter();
 
 document.addEventListener('DOMContentLoaded', mostrarDesdeLs);
