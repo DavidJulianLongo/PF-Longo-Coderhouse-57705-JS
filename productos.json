@@ -74,7 +74,7 @@
         "nombre": "Ernie Ball Extra Slinky",
         "precio": 40500,
         "stock": 4,
-        "img": "./css/assets/img/cuerdas/extra.png"
+        "img": "./assets/img/cuerdas/extra.png"
     },
     {
         "id": 313,
