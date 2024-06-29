@@ -1,0 +1,156 @@
+[
+    {
+        "id": 211,
+        "nombre": "Ernie Ball Hybrid Slinky",
+        "precio": 55000,
+        "stock": 10,
+        "img": "/css/assets/img/cuerdas/hybrid.png"
+    },
+    {
+        "id": 310,
+        "nombre": "Rotosound BS66",
+        "precio": 70500,
+        "stock": 15,
+        "img": "/css/assets/img/cuerdas/BS66.jpg"
+    },
+    {
+        "id": 410,
+        "nombre": "DR Neon Green",
+        "precio": 76500,
+        "stock": 3,
+        "img": "/css/assets/img/cuerdas/dr_green.jpg"
+    },
+    {
+        "id": 170,
+        "nombre": "D'addario EPBB170",
+        "precio": 67500,
+        "stock": 16,
+        "img": "/css/assets/img/cuerdas/daddarioEPBB170.jpg"
+    },
+    {
+        "id": 311,
+        "nombre": "Rotosound RS66LE",
+        "precio": 70500,
+        "stock": 10,
+        "img": "/css/assets/img/cuerdas/RS66LE.jpg"
+    },
+    {
+        "id": 212,
+        "nombre": "Ernie Ball Regular Slinky",
+        "precio": 47000,
+        "stock": 12,
+        "img": "/css/assets/img/cuerdas/regular.png"
+    },
+    {
+        "id": 213,
+        "nombre": "Ernie Ball Super Slinky",
+        "precio": 43500,
+        "stock": 25,
+        "img": "/css/assets/img/cuerdas/super.png"
+    },
+    {
+        "id": 160,
+        "nombre": "D'addario EXL160",
+        "precio": 70500,
+        "stock": 11,
+        "img": "/css/assets/img/cuerdas/daddarioEXL160.jpg"
+    },
+    {
+        "id": 411,
+        "nombre": "DR Neon Multi-color",
+        "precio": 82850,
+        "stock": 4,
+        "img": "/css/assets/img/cuerdas/dr_multi.jpg"
+    },
+    {
+        "id": 312,
+        "nombre": "Rotosound RS66LF",
+        "precio": 43500,
+        "stock": 4,
+        "img": "/css/assets/img/cuerdas/RS66LF.jpg"
+    },
+    {
+        "id": 214,
+        "nombre": "Ernie Ball Extra Slinky",
+        "precio": 40500,
+        "stock": 4,
+        "img": "/css/assets/img/cuerdas/extra.png"
+    },
+    {
+        "id": 313,
+        "nombre": "Rotosound RS66LH",
+        "precio": 43500,
+        "stock": 12,
+        "img": "/css/assets/img/cuerdas/RS66LH.jpg"
+    },
+    {
+        "id": 171,
+        "nombre": "D'addario EXL170",
+        "precio": 43500,
+        "stock": 4,
+        "img": "/css/assets/img/cuerdas/daddarioEXL170.jpg"
+    },
+    {
+        "id": 412,
+        "nombre": "DR Neon Orange",
+        "precio": 80750,
+        "stock": 6,
+        "img": "/css/assets/img/cuerdas/dr_orange.jpg"
+    },
+    {
+        "id": 215,
+        "nombre": "Ernie Ball Hyper Slinky",
+        "precio": 40500,
+        "stock": 4,
+        "img": "/css/assets/img/cuerdas/hyper.png"
+    },
+    {
+        "id": 314,
+        "nombre": "Rotosound RDB66LD",
+        "precio": 43500,
+        "stock": 10,
+        "img": "/css/assets/img/cuerdas/RDB66LD.jpg"
+    },
+    {
+        "id": 216,
+        "nombre": "Ernie Ball Power Slynky",
+        "precio": 56000,
+        "stock": 7,
+        "img": "/css/assets/img/cuerdas/power.png"
+    },
+    {
+        "id": 172,
+        "nombre": "D'addario EXL220-5",
+        "precio": 43500,
+        "stock": 8,
+        "img": "/css/assets/img/cuerdas/daddarioEXL220-5.jpg"
+    },
+    {
+        "id": 217,
+        "nombre": "Ernie Ball Beefy Slynky",
+        "precio": 65500,
+        "stock": 4,
+        "img": "/css/assets/img/cuerdas/beefy.png"
+    },
+    {
+        "id": 413,
+        "nombre": "DR Neon Red 5",
+        "precio": 95650,
+        "stock": 6,
+        "img": "/css/assets/img/cuerdas/dr_red.jpg"
+    },
+    {
+        "id": 315,
+        "nombre": "Rotosound RS66LN",
+        "precio": 43500,
+        "stock": 7,
+        "img": "/css/assets/img/cuerdas/RS66LN.jpg"
+    },
+    {
+        "id": 174,
+        "nombre": "D'addario EXL170-5",
+        "precio": 54810,
+        "stock": 10,
+        "img": "/css/assets/img/cuerdas/daddarioEXL170-5.jpg"
+    }
+]
