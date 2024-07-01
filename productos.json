@@ -152,5 +152,12 @@
         "precio": 54810,
         "stock": 10,
         "img": "./assets/img/cuerdas/daddarioEXL170-5.jpg"
+    },
+    {
+        "id": 175,
+        "nombre": "D'addario XT 45-130",
+        "precio": 76810,
+        "stock": 3,
+        "img": "./assets/img/cuerdas/daddarioXT45-130.jpg"
     }
 ]

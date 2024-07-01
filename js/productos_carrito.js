@@ -18,7 +18,7 @@ const mostrarProductos = (productos) => {
     productos.forEach(producto => {
         const card = document.createElement('div');
         card.className = 'card';
-        
+
         card.innerHTML = `
             <img src="${producto.img}" alt="${producto.nombre}">
             <div class="card-content">
@@ -60,12 +60,10 @@ function aniadirALs() {
                 localStorage.setItem(`producto_${productoId}`, JSON.stringify(itemEnLs));
 
                 Toastify({
-                    text: `${productoAgregado.nombre}\nse agregó al carrito`,
+                    avatar: productoAgregado.img,
+                    text: ' se añadió a tu carrito',
                     className: 'info',
-                    offset: {
-                        x: 120,
-                        y: 35
-                    },
+                   
                     style: {
                         background: '#27ae60',
                     }
@@ -119,7 +117,7 @@ function filtrarPorMarca() {
 
         ulNavLi.addEventListener('click', () => {
             const productosFiltrados = tienda.productos.filter(producto => producto.nombre.includes(marca));
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             mostrarProductos(productosFiltrados);
         });
     }
@@ -132,15 +130,30 @@ shopName.addEventListener('click', () => {
     mostrarProductos(tienda.productos)
 });
 
+
 //Elimina productos del carrito y LS
 carrito.addEventListener('click', (event) => {
     if (event.target.classList.contains('btn-eliminar')) {
         const key = event.target.getAttribute('data-key');
         let itemEnLs = JSON.parse(localStorage.getItem(key));
 
-        itemEnLs.cantidad > 1 ? (itemEnLs.cantidad -= 1, localStorage.setItem(key, JSON.stringify(itemEnLs))) : localStorage.removeItem(key);
+        itemEnLs.cantidad > 1 ? (itemEnLs.cantidad -= 1, localStorage.setItem(key, JSON.stringify(itemEnLs))): localStorage.removeItem(key);
+        
+        Toastify({
+            avatar: itemEnLs.img,
+            text: ' se eliminó del carrito',
+            className: 'info',
+            // offset: {
+            //     x: 120,
+            //     y: 35
+            // },
+            style: {
+                background: '#ff4d4d',
+            }
+        }).showToast();
 
         mostrarDesdeLs();
+        
     }
 });
 
