@@ -62,8 +62,8 @@ function aniadirALs() {
                 Toastify({
                     avatar: productoAgregado.img,
                     text: ' se añadió a tu carrito',
+                    duration: 1500,
                     className: 'info',
-                   
                     style: {
                         background: '#27ae60',
                     }
@@ -142,11 +142,8 @@ carrito.addEventListener('click', (event) => {
         Toastify({
             avatar: itemEnLs.img,
             text: ' se eliminó del carrito',
+            duration: 1500,
             className: 'info',
-            // offset: {
-            //     x: 120,
-            //     y: 35
-            // },
             style: {
                 background: '#ff4d4d',
             }
