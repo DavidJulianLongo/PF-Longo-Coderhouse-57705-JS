@@ -29,8 +29,23 @@ const cartContainer = document.createElement('div');
 cartContainer.className = 'cart__container';
 navbar.appendChild(cartContainer);
 const cart = document.createElement('i');
+cart.id = 'cart-show';
 cart.classList.add('fas', 'fa-shopping-cart');
 cartContainer.appendChild(cart);
+
+const aside = document.querySelector('aside');
+const btnCerrar = document.querySelector('#btn-close-menu');
+const cartShow = document.querySelector('#cart-show');
+
+cartShow.addEventListener('click', () =>{
+    aside.classList.add('aside-visible');
+});
+
+
+btnCerrar.addEventListener('click', () =>{
+    aside.classList.remove('aside-visible');
+});
+
 
 
 
