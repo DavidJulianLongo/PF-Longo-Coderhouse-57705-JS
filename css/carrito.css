@@ -108,7 +108,8 @@ th, td {
     margin: 0 auto;
     padding: .9375rem;
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, 
+    transform 0.2s;
     width: 10rem;
 }
 
