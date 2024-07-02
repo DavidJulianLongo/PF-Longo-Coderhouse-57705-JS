@@ -11,7 +11,7 @@ aside{
     opacity: 0;
     visibility: hidden;
     max-width: 43.75rem;
-    transition: 0.3s;    
+    transition: 0.5s;    
 }
 
 .aside-visible{
@@ -98,18 +98,18 @@ th, td {
 }
 
 .btn-finalizar {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
     background-color: #28a745;
-    color: white;
-    border: none;
-    padding: .9375rem;
-    font-size: 1rem;
-    cursor: pointer;
     border-radius: .3125rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: .9375rem;
     text-align: center;
     transition: background-color 0.3s, transform 0.2s;
+    width: 10rem;
 }
 
 .btn-finalizar:hover {
