@@ -10,6 +10,7 @@ const cardContainer = document.querySelector('.card-container');
 const carrito = document.getElementById('carrito');
 const carritoBody = document.getElementById('carrito-body');
 const totalCarrito = document.getElementById('total-carrito');
+const btnComprar = document.querySelector('#btn-comprar');
 
 
 // Genera las cards para mostrar cada uno de los productos de la tienda
@@ -35,6 +36,8 @@ const mostrarProductos = (productos) => {
     aniadirALs();
 }
 
+
+
 // Carga los productos desde el JSON y luego los muestra
 const cargarProductos = async () => {
     const resp = await fetch('./productos.json');
@@ -44,7 +47,7 @@ const cargarProductos = async () => {
 }
 
 
-// Agrega eventos a todos los botones
+// Agrega eventos a todos los botones y añade el producto al LS
 function aniadirALs() {
     const btnAniadir = document.querySelectorAll('.agregar-btn');
     btnAniadir.forEach(btn => {
@@ -87,15 +90,15 @@ function mostrarDesdeLs() {
 
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        const productEnLs = JSON.parse(localStorage.getItem(key));
-        const subtotal = productEnLs.precio * productEnLs.cantidad;
+        const productoEnLs = JSON.parse(localStorage.getItem(key));
+        const subtotal = productoEnLs.precio * productoEnLs.cantidad;
         total += subtotal;
 
         const row = `
                 <tr>
-                    <td>${productEnLs.nombre}</td>
-                    <td>$${productEnLs.precio.toFixed(2)}</td>
-                    <td>${productEnLs.cantidad}</td>
+                    <td>${productoEnLs.nombre}</td>
+                    <td>$${productoEnLs.precio.toFixed(2)}</td>
+                    <td>${productoEnLs.cantidad}</td>
                     <td>$${subtotal.toFixed(2)}</td>
                     <td><button class="btn-eliminar" data-key="${key}">Eliminar</button></td>
                 </tr>
@@ -104,6 +107,30 @@ function mostrarDesdeLs() {
     }
     totalCarrito.innerHTML = `$${total.toFixed(2)}`;
 };
+
+
+// Elimina todos los productos del LS (y del carrito) al hacer click en Comprar y muestra un mensaje de compra exitosa
+function comprar() {
+    btnComprar.addEventListener('click', () => {
+        for (let i = 0; i < localStorage.length; i++){
+            const key = localStorage.key(i);
+            const productos = JSON.parse(localStorage.getItem(key));
+
+            if (productos){
+                localStorage.clear();
+                mostrarDesdeLs();
+                aside.classList.remove('aside-visible');
+        
+                Swal.fire({
+                    title: "Compra realizada con éxito",
+                    text: "Gracias por elegirnos.!!!",
+                    icon: "success",
+                    showCloseButton: true
+                });
+            }
+        }
+    })
+}
 
 
 // Filtra los productos por marca
@@ -116,7 +143,7 @@ function filtrarPorMarca() {
         ulNav.appendChild(ulNavLi);
 
         ulNavLi.addEventListener('click', () => {
-            const productosFiltrados = tienda.productos.filter(producto => producto.nombre.includes(marca));
+            const productosFiltrados = tienda.productos.filter(producto => producto.nombre.includes(marca),);
             window.scrollTo({ top: 0, behavior: 'smooth' });
             mostrarProductos(productosFiltrados);
         });
@@ -137,8 +164,8 @@ carrito.addEventListener('click', (event) => {
         const key = event.target.getAttribute('data-key');
         let itemEnLs = JSON.parse(localStorage.getItem(key));
 
-        itemEnLs.cantidad > 1 ? (itemEnLs.cantidad -= 1, localStorage.setItem(key, JSON.stringify(itemEnLs))): localStorage.removeItem(key);
-        
+        itemEnLs.cantidad > 1 ? (itemEnLs.cantidad -= 1, localStorage.setItem(key, JSON.stringify(itemEnLs))) : localStorage.removeItem(key);
+
         Toastify({
             avatar: itemEnLs.img,
             text: ' se eliminó del carrito',
@@ -150,7 +177,6 @@ carrito.addEventListener('click', (event) => {
         }).showToast();
 
         mostrarDesdeLs();
-        
     }
 });
 
@@ -160,5 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarProductos();
     mostrarDesdeLs();
     filtrarPorMarca();
+    comprar();
 });
 

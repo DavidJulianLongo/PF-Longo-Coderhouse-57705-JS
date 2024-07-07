@@ -30,7 +30,7 @@ cartContainer.className = 'cart__container';
 navbar.appendChild(cartContainer);
 const cart = document.createElement('i');
 cart.id = 'cart-show';
-cart.classList.add('fas', 'fa-shopping-cart');
+cart.classList.add('bi', 'bi-cart4');
 cartContainer.appendChild(cart);
 
 const aside = document.querySelector('aside');
@@ -40,7 +40,6 @@ const cartShow = document.querySelector('#cart-show');
 cartShow.addEventListener('click', () =>{
     aside.classList.add('aside-visible');
 });
-
 
 btnCerrar.addEventListener('click', () =>{
     aside.classList.remove('aside-visible');

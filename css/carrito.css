@@ -1,17 +1,17 @@
 aside{
     position: fixed;
-    z-index: 9;
+    z-index: 10;
     background-color: #fff;
     right: 0;
     top: 0;
     height: 100%;
-    padding: 6rem 2rem 3rem 2rem;
+    padding: 6rem 4rem 3rem 2rem;
     box-shadow: 0 0 0 100vmax #000000bf;
     transform: translateX(100%);
-    opacity: 0;
     visibility: hidden;
     max-width: 43.75rem;
-    transition: 0.5s;    
+    transition: 0.5s;
+    overflow: auto;
 }
 
 .aside-visible{
@@ -25,7 +25,7 @@ aside{
     align-items: centera;
     justify-content: space-between;
     margin-bottom: 3rem;
-}   
+}
 
 .aside-header button{
     background-color: transparent;
@@ -51,7 +51,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.25rem;
-    
+
 }
 
 th, td {
@@ -62,7 +62,7 @@ th, td {
 }
 
 .carrito-header {
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
 }
 
 
@@ -83,7 +83,7 @@ th, td {
 
 .btn-eliminar:active {
     background-color: #9e1414;
-    transform: scale(0.95); 
+    transform: scale(0.95);
 }
 
 
@@ -97,7 +97,7 @@ th, td {
     font-weight: bold;
 }
 
-.btn-finalizar {
+.btn-comprar {
     background-color: #28a745;
     border-radius: .3125rem;
     border: none;
@@ -108,16 +108,15 @@ th, td {
     margin: 0 auto;
     padding: .9375rem;
     text-align: center;
-    transition: background-color 0.3s, 
-    transform 0.2s;
-    width: 10rem;
+    transition: background-color 0.3s;
+    width: 6.25rem;
 }
 
-.btn-finalizar:hover {
+.btn-comprar:hover {
     background-color: #208d4e;
 }
 
-.btn-finalizar:active {
-    background-color: #0e5c2e; 
-    transform: scale(0.99); 
+.btn-comprar:active {
+    background-color: #0e5c2e;
+    transform: scale(0.95);
 }
