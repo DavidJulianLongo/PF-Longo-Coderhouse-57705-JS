@@ -14,6 +14,13 @@
         "img": "./assets/img/cuerdas/BS66.jpg"
     },
     {
+        "id": 540,
+        "nombre": "Fender 7350M",
+        "precio": 45550,
+        "stock": 5,
+        "img": "./assets/img/cuerdas/fender_7350M.jpg"
+    },
+    {
         "id": 410,
         "nombre": "DR Neon Green",
         "precio": 76500,
@@ -56,6 +63,13 @@
         "img": "./assets/img/cuerdas/daddarioEXL160.jpg"
     },
     {
+        "id": 530,
+        "nombre": "Fender 7250L",
+        "precio": 49717,
+        "stock": 6,
+        "img": "./assets/img/cuerdas/fender_7250L.jpg"
+    },
+    {
         "id": 411,
         "nombre": "DR Neon Multi-color",
         "precio": 82850,
@@ -82,6 +96,13 @@
         "precio": 43500,
         "stock": 12,
         "img": "./assets/img/cuerdas/RS66LH.jpg"
+    },
+    {
+        "id": 510,
+        "nombre": "Fender 5250ML",
+        "precio": 53397,
+        "stock": 24,
+        "img": "./assets/img/cuerdas/fender_5250ML.jpg"
     },
     {
         "id": 171,
@@ -133,6 +154,13 @@
         "img": "./assets/img/cuerdas/beefy.png"
     },
     {
+        "id": 520,
+        "nombre": "Fender 7250-6M",
+        "precio": 65450,
+        "stock": 4,
+        "img": "./assets/img/cuerdas/fender_7250-6M.jpg"
+    },
+    {
         "id": 413,
         "nombre": "DR Neon Red 5",
         "precio": 95650,
@@ -159,5 +187,12 @@
         "precio": 76810,
         "stock": 3,
         "img": "./assets/img/cuerdas/daddarioXT45-130.jpg"
+    },
+    {
+        "id": 540,
+        "nombre": "Fender 8250M",
+        "precio": 68550,
+        "stock": 10,
+        "img": "./assets/img/cuerdas/fender_8250M.jpg"
     }
 ]

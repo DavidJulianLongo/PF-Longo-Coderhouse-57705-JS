@@ -37,7 +37,6 @@ const mostrarProductos = (productos) => {
 }
 
 
-
 // Carga los productos desde el JSON y luego los muestra
 const cargarProductos = async () => {
     const resp = await fetch('./productos.json');
@@ -135,7 +134,7 @@ function comprar() {
 
 // Filtra los productos por marca
 function filtrarPorMarca() {
-    const marcasProductos = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon"];
+    const marcasProductos = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon", "Fender"];
 
     for (const marca of marcasProductos) {
         const ulNavLi = document.createElement('li');
@@ -154,7 +153,7 @@ function filtrarPorMarca() {
 //Muestra todos los productos al hacer click en el nombre de la pag
 shopName.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    mostrarProductos(tienda.productos)
+    mostrarProductos(tienda.productos);
 });
 
 
@@ -168,7 +167,7 @@ carrito.addEventListener('click', (event) => {
 
         Toastify({
             avatar: itemEnLs.img,
-            text: ' se eliminó del carrito',
+            text: ' se eliminó de tu carrito',
             duration: 1000,
             className: 'info',
             style: {
