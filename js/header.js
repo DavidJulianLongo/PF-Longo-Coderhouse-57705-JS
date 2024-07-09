@@ -10,7 +10,7 @@ navbar.appendChild(divLogoContainer);
 const imgLogo = document.createElement('img');
 imgLogo.src = './assets/img/logo/bajo.png';
 divLogoContainer.appendChild(imgLogo);
-const shopName = document.createElement('p');
+const shopName = document.createElement('h2');
 shopName.className = 'shop__name';
 shopName.innerHTML = 'DB-STRINGS';
 divLogoContainer.appendChild(shopName);
@@ -33,6 +33,8 @@ cart.id = 'cart-show';
 cart.classList.add('bi', 'bi-cart4');
 cartContainer.appendChild(cart);
 
+
+//Muestra el carrito al hacer click en en icono carrtio, y lo cierra al hacer click en el icono X
 const aside = document.querySelector('aside');
 const btnCerrar = document.querySelector('#btn-close-menu');
 const cartShow = document.querySelector('#cart-show');
