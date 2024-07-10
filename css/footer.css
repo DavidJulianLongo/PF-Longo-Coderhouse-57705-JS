@@ -7,15 +7,17 @@ footer{
 
 .footer-container{
     display: flex;
+    flex-wrap: wrap;
+    gap: 3.125rem;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 auto;
     max-width: 90rem;
 }
 
 .footer-tittle{
-    border-bottom: 1px solid #fff ;
+    border-bottom: .0313rem solid #fff ;
     margin-bottom: 1.5rem;
-    padding-bottom: .25rem;
+    padding-bottom: .125rem;
     width: max-content;
     
 }

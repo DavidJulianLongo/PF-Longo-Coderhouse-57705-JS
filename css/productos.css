@@ -1,13 +1,15 @@
 .card-container {
     display: flex;
     row-gap: 6rem;
-    column-gap: 5rem;
+    column-gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 1.25rem;
+    max-width: 1440px;
+    margin: 0 auto;
     margin-bottom: 12.5rem;
-    min-height: 100vh;
+    padding: 1.25rem 6.25rem;
+    
 }
 
 .card {
@@ -15,7 +17,7 @@
     border-radius: .9375rem;
     box-shadow: 0 .25rem .5rem #00000056;
     overflow: hidden;
-    width: 18.75rem;
+    width: 15.625rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -59,7 +61,7 @@
 
 .agregar-btn {
     padding: .625rem .625rem;
-    font-size: 1em;
+    font-size: .75rem;
     color: #fff;
     background-color: #27ae60;
     border: none;

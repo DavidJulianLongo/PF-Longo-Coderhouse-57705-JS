@@ -1,0 +1,19 @@
+.banner {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+.slides {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.slide-img {
+    width: 100%;
+    height: 48px;
+}

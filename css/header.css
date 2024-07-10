@@ -2,7 +2,6 @@
     background-color: #253a55;
     box-shadow: 0 .25rem .5rem #0000001a;
     padding: 1.25rem 6.25rem;
-    margin-bottom: 10rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -44,7 +43,7 @@
 
 .products__container ul li {
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 

@@ -11,6 +11,7 @@ const carrito = document.getElementById('carrito');
 const carritoBody = document.getElementById('carrito-body');
 const totalCarrito = document.getElementById('total-carrito');
 const btnComprar = document.querySelector('#btn-comprar');
+const marcasProductos = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon", "Fender"];
 
 
 // Genera las cards para mostrar cada uno de los productos de la tienda
@@ -37,7 +38,7 @@ const mostrarProductos = (productos) => {
 }
 
 
-// Carga los productos desde el JSON y luego los muestra
+// Carga los productos desde productos.json y luego los muestra
 const cargarProductos = async () => {
     const resp = await fetch('./productos.json');
     const productos = await resp.json();
@@ -134,8 +135,6 @@ function comprar() {
 
 // Filtra los productos por marca
 function filtrarPorMarca() {
-    const marcasProductos = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon", "Fender"];
-
     for (const marca of marcasProductos) {
         const ulNavLi = document.createElement('li');
         ulNavLi.innerHTML = marca;

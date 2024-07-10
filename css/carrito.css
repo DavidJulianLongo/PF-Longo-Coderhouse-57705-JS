@@ -68,7 +68,7 @@ th, td {
 
 .btn-eliminar {
     background-color: #ff4d4d;
-    color: white;
+    color: #fff;
     border: none;
     padding: .5rem .75rem;
     cursor: pointer;
@@ -78,7 +78,6 @@ th, td {
 
 .btn-eliminar:hover {
     background-color: #ff1a1a;
-
 }
 
 .btn-eliminar:active {
@@ -101,7 +100,7 @@ th, td {
     background-color: #28a745;
     border-radius: .3125rem;
     border: none;
-    color: white;
+    color: #fff;
     cursor: pointer;
     display: block;
     font-size: 1rem;

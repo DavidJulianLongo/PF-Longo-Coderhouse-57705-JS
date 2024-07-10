@@ -19,9 +19,9 @@ productos.append(productosTitle, productosUl);
 productosTitle.innerHTML = 'Productos';
 productosTitle.className = 'footer-tittle'
 
-// Filtra los productos por marca
-const marcas = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon", "Fender"];
-for (const marca of marcas) {
+
+//Filtra los productos por marca
+for (const marca of marcasProductos) {
     const productosUlLi = document.createElement('li');
     productosUlLi.innerHTML = marca;
     productosUl.appendChild(productosUlLi);

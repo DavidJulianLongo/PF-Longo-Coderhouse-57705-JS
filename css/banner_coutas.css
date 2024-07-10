@@ -1,0 +1,11 @@
+.banner_cuotas{
+    background-color: #fff;
+    margin-bottom: 10rem;
+    width: 100%;
+}
+
+.banner_cuotas img{
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+}
