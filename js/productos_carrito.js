@@ -125,7 +125,8 @@ function comprar() {
                     title: "Compra realizada con éxito",
                     text: "Gracias por elegirnos.!!!",
                     icon: "success",
-                    showCloseButton: true
+                    showCloseButton: true,
+                    footer: `<img src="./assets/img/logo/bajo.png"><h3>DB-STRINGS</h3>`
                 });
             }
         }

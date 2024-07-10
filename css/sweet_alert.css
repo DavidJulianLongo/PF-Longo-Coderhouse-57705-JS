@@ -10,3 +10,7 @@
     background-color: #253a55 !important;
     width: 7.5rem !important;
 }
+
+.swal2-footer img{
+    width: 3.125rem;
+}
