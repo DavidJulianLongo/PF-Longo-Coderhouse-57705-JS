@@ -100,12 +100,13 @@ th, td {
     background-color: #28a745;
     border-radius: .3125rem;
     border: none;
+    box-shadow: 0 .25rem .5rem #0000001c;
     color: #fff;
     cursor: pointer;
     display: block;
     font-size: 1rem;
     margin: 0 auto;
-    padding: .9375rem;
+    padding: .5rem;
     text-align: center;
     transition: background-color 0.3s;
     width: 12.5rem;
