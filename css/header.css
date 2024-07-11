@@ -2,11 +2,8 @@
     background-color: #253a55;
     box-shadow: 0 .25rem .5rem #0000001a;
     padding: 1.25rem 6.25rem;
-    position: sticky;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 6;
+    
 }
 
 .nav__bar {

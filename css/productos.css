@@ -7,9 +7,9 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    margin-bottom: 12.5rem;
+    margin-bottom: 5rem;
     padding: 1.25rem 6.25rem;
-    
+
 }
 
 .card {
@@ -23,6 +23,7 @@
 
 .card img {
     width: 100%;
+
 }
 
 .card-content {
@@ -48,6 +49,7 @@
 .price-buy {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: .625rem;
     align-items: center;
     margin-top: .9375rem;
@@ -75,10 +77,35 @@
 }
 
 .agregar-btn:active {
-    background-color: #0e5c2e; 
-    transform: scale(0.95); 
+    background-color: #0e5c2e;
+    transform: scale(0.95);
 }
 
 .card:hover {
     box-shadow: 0 .75rem 1.5rem #00000033;
+}
+
+.btn-todos {
+    background-color: #28a745;
+    border-radius: .3125rem;
+    border: none;
+    box-shadow: 0 .75rem .5rem #00000067;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    margin: 0 auto 10rem auto;
+    padding: .9375rem;
+    text-align: center;
+    transition:  0.3s background-color;
+    width: 18.75rem;
+}
+
+.btn-todos:hover {
+    background-color: #208d4e;
+}
+
+.btn-todos:active {
+    background-color: #0e5c2e;
+    transform: scale(0.95);
 }

@@ -4,12 +4,12 @@ aside{
     background-color: #fff;
     right: 0;
     top: 0;
+    width: 43.75rem;
     height: 100%;
-    padding: 6rem 4rem 3rem 2rem;
+    padding: 6rem 2rem;
     box-shadow: 0 0 0 100vmax #000000bf;
     transform: translateX(100%);
     visibility: hidden;
-    max-width: 43.75rem;
     transition: 0.5s;
     overflow: auto;
 }
@@ -22,7 +22,7 @@ aside{
 
 .aside-header{
     display: flex;
-    align-items: centera;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 3rem;
 }
@@ -108,7 +108,7 @@ th, td {
     padding: .9375rem;
     text-align: center;
     transition: background-color 0.3s;
-    width: 6.25rem;
+    width: 12.5rem;
 }
 
 .btn-comprar:hover {

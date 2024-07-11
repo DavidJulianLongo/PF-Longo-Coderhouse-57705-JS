@@ -6,11 +6,16 @@ class Tienda {
 
 const tienda = new Tienda();
 
-const cardContainer = document.querySelector('.card-container');
-const carrito = document.getElementById('carrito');
-const carritoBody = document.getElementById('carrito-body');
-const totalCarrito = document.getElementById('total-carrito');
+const cardContainer = document.querySelector('#card-container');
+const carrito = document.querySelector('#carrito');
+const carritoBody = document.querySelector('#carrito-body');
+const totalCarrito = document.querySelector('#total-carrito');
 const btnComprar = document.querySelector('#btn-comprar');
+const divTodos = document.querySelector('#btn-mostrar-todos');
+const btnTodos = document.createElement('button');
+divTodos.appendChild(btnTodos);
+btnTodos.innerHTML = 'Inicio';
+btnTodos.className = 'btn-todos';
 const marcasProductos = ["Ernie Ball", "D'addario", "Rotosound", "DR Neon", "Fender"];
 
 
@@ -150,8 +155,8 @@ function filtrarPorMarca() {
 }
 
 
-//Muestra todos los productos al hacer click en el nombre de la pag
-shopName.addEventListener('click', () => {
+//Muestra todos los productos e hace un scroll al inicio
+btnTodos.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     mostrarProductos(tienda.productos);
 });

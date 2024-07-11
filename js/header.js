@@ -17,7 +17,7 @@ shopName.innerHTML = 'DB-STRINGS';
 divLogoContainer.appendChild(shopName);
 
 
-// creo el ul y desde productos_carrito.js se agregan los li
+// genera el ul y desde productos_carrito.js se agregan los li
 const productsContainer = document.createElement('div');
 const ulNav = document.createElement('ul');
 productsContainer.className = 'products__container';
