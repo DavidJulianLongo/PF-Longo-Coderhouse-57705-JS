@@ -1,11 +1,13 @@
-footer{
+footer {
+    display: felx;
+    flex-direction: column-reverse;
     background-color: #253a55;
     padding: 5rem 6.25rem;
     width: 100%;
     color: #fff;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     flex-wrap: wrap;
     gap: 3.125rem;
@@ -14,15 +16,15 @@ footer{
     max-width: 90rem;
 }
 
-.footer-tittle{
-    border-bottom: .0313rem solid #fff ;
+.footer-tittle {
+    border-bottom: .0313rem solid #fff;
     margin-bottom: 1.5rem;
     padding-bottom: .125rem;
     width: max-content;
-    
+
 }
 
-.footer-container li{
+.footer-container li {
     font-size: .875rem;
     cursor: pointer;
     margin-bottom: .5rem;
@@ -32,20 +34,43 @@ footer{
     color: #ff6600;
 }
 
-.footer-redes a{
+.footer-redes a {
     font-size: 1.5rem;
     margin-right: 1rem;
     color: #fff;
 }
 
-.footer-contacto{
+.footer-contacto {
     display: flex;
     flex-direction: column;
 }
 
-.footer-contacto i{
+.footer-contacto i {
     margin-bottom: 1rem;
     width: max-content;
     color: #fff;
+}
+
+.creador {
+    border-top: .0125rem solid #e7e7e7b0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.creador h5 {
+    font-size: .875rem;
+    text-align: center;
+    display: block;
+    margin: 1.25rem auto .625rem auto;
+}
+
+.redes-dl {
+    text-align: center;
+}
+
+.redes-dl a {
+    margin: .625rem .3125rem .625rem 0;
+    color: #fff;
+    align-content: center;
 }
 

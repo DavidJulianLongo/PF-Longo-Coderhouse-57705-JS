@@ -43,7 +43,7 @@ const mostrarProductos = (productos) => {
 }
 
 
-// Carga los productos desde productos.json y luego los muestra
+// Carga los productos desde productos.json y muestra las cards
 const cargarProductos = async () => {
     const resp = await fetch('./productos.json');
     const productos = await resp.json();
@@ -139,7 +139,7 @@ function comprar() {
 }
 
 
-// Filtra los productos por marca
+//Filtra los productos por marca
 function filtrarPorMarca() {
     for (const marca of marcasProductos) {
         const ulNavLi = document.createElement('li');
@@ -155,7 +155,7 @@ function filtrarPorMarca() {
 }
 
 
-//Muestra todos los productos e hace un scroll al inicio
+//Muestra todos los productos y hace un scroll al inicio
 btnTodos.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     mostrarProductos(tienda.productos);
@@ -185,7 +185,7 @@ carrito.addEventListener('click', (event) => {
 });
 
 
-// Muestra los productos después de que se cargue el DOM
+//Realiza las llamadas a las funciones despues de cargar el DOM
 document.addEventListener('DOMContentLoaded', () => {
     cargarProductos();
     mostrarDesdeLs();
